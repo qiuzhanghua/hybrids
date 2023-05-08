@@ -1,15 +1,17 @@
 import { define, html } from "hybrids";
 
-export function increaseCount(host) {
-    host.count += 1;
+interface SimpleCounter {
+  count: number;
 }
 
-export default define({
-    tag: "simple-counter",
-    count: 0,
-    render: ({ count }) => html`
-    <button onclick="${increaseCount}">
-      Count: ${count}
-    </button>
+export function increaseCount (host: SimpleCounter) {
+  host.count += 1;
+}
+
+export default define<SimpleCounter>({
+  tag: "simple-counter",
+  count: 0,
+  render: ({ count }) => html`
+    <button onclick="${increaseCount}">Count: ${count}</button>
   `
 });

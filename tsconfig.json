@@ -7,7 +7,7 @@
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -20,7 +20,8 @@
     "noFallthroughCasesInSwitch": true,
 
     /* Type checking */
-    "noImplicitAny": false
+    /* "noImplicitAny": false */
+    "types": ["vitest/globals"]
   },
   "include": ["src"],
 }

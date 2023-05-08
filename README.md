@@ -14,3 +14,6 @@ pnpm dev
 ```
 pnpm build
 ```
+
+## References
+1. https://hybrids.js.org/#/component-model/typescript
